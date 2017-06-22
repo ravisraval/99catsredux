@@ -1,0 +1,12 @@
+<% @action = (@file == 'sessions') ? sessions_url : users_url %>
+
+
+<form action=" <%= @action %>" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  Username:<input type="text" name="username" >
+  <br>
+  Password:<input type="text" name="password" >
+  <input type="submit">
+</form>
